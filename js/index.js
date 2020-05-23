@@ -10,11 +10,13 @@ function startedGIF(myState)
 
 function isDate(date) 
 {
+    var today   = new Date();
+    var dateAux = new Date();
     var aux     = date.split('-');
-    currentDate = new Date().getFullYear();
-    currentDay  = new Date().getDay();
-
-    if (aux[0] > currentDate + 1 || aux[0] < currentDate)
+    
+    dateAux.setFullYear(aux[0], aux[1]-1, aux[2]);
+    
+    if(dateAux <= today)
     {
         return false;
     }
