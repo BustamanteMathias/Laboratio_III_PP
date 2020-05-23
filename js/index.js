@@ -232,6 +232,7 @@ function callDelete()
         {
             startedGIF(true);
             controller.parentNode.removeChild(controller);
+            fnClose();
         }
     }
 }
